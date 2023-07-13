@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tammy food</title>
+    <link rel="icon" href="./images/pizza.png" type="image/png">
+    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header homeHeader">
+            <div class="container">
+                <h2>Tammy <span>Food</span></h2>
+                <ul>
+                    <a href="#home"><li>Home</li></a>
+                    <a href="#about"><li>About us</li></a>
+                    <a href="#menu"><li>Menu</li></a>
+                    <a href="#blog"><li>Blog</li></a>
+                    <a href="#contact"><li>Contact Us</li></a>
+                </ul>
+                <div class="openCart">
+                    Cart
+                    <div class="itemCount">0</div>
+                </div>
+                <div class="burger" id="headerBurger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="leftPart" >
+                 <h2>КОРЗИНА</h2>
+                 <div class="itemPlace">
+                     
+                 </div>
+            </div>
+            <div class="rightPart">
+                 <h2>Сума замовлення : <span id="costs">$0</span></h2>
+                 <span>
+                     <form id="orderingForm">
+                         <input type="text" placeholder="Ваш номер телефону" id="orderInput">
+                         <button type="submit" id="orderBtn">Замовити</button>
+                     </form>
+                 </span>
+                 <div class="back"><i class="fa-solid fa-x"></i></div>
+            </div>
+         </div>
+        <div class="homePage" id="home">
+            <div class="burgerMenu">
+                <div class="container">
+                    <div class="header menuHeader">
+                        <h2>Tammy <span>Food</span></h2>
+                        <div class="burger" id="menuBurger">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div id="links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About us</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#contact">Contact Us</a> 
+                    </div>
+                </div>
+            </div>
+
+                <div class="sections">
+                    <div class="container">
+                        <div class="leftSection">
+                            <div class="fastDelivery">Fast Delivery</div>
+                            <p>Discover Your Favourite Food and <span>Test Forever</span></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                            <div>
+                                <button>Get started</button>
+                                <div>more information</div>
+                            </div>
+                        </div>
+                        <div class="rightSection"></div>
+                </div>
+            </div>
+        </div>
+        <div class="howItWorks" id="about">
+            <div class="container">
+                <h2>How it Works</h2>
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                <div class="itemBox">
+                    <div class="item">
+                        <img src="./images/howItWorks/item1.svg" alt="">
+                        <h2>Order Now</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    </div>
+                    <img class="line" src="./images/howItWorks/vector1.svg" alt="">
+                    <div class="item centerItem">
+                        <img src="./images/howItWorks/item2.svg" alt="">
+                        <h2>Get Delivery</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    </div>
+                    <img class="line" src="./images/howItWorks/vector2.svg" alt="">
+                    <div class="item">
+                        <img src="./images/howItWorks/item3.svg" alt="">
+                        <h2>Payment</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ourDeliciousDish" id="menu">
+            <div class="container">
+                <h2>Our Delicious Dish</h2>
+                <p class="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</p>
+                <div class="pizzaContainer">
+                    
+                </div>
+                <div class="pagination">
+                    <button class="prevBtn">
+                        <img src="./images/ourDeliciousDish/leftArrow.svg" alt="">
+                    </button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button class="nextBtn">
+                        <img src="./images/ourDeliciousDish/rightArrow.svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ourTarget" id="blog">
+            <div class="container">
+                <div class="leftPart">
+                    <img src="./images/ourTarget/leftImage.svg" alt="">
+                </div>
+                <div class="rightPart">
+                    <div class="target">Our Target</div>
+                    <h2>We Earn Your Trust and are Diligent in Your Case</h2>
+                    <p>When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                        <br><br><br>
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <button class="orderNow">Order Now</button>    
+                </div>
+            </div>
+        </div>
+        <div class="downloadApp">
+            <div class="container">
+                <div class="leftPart">
+                    <h2>To Get 15% Discount Download The App</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <div>
+                        <img src="./images/downloadApp/googlePlay.svg" alt="">
+                        <img src="./images/downloadApp/appStore.svg" alt="">
+                    </div>
+                </div>
+                <div class="rightPart">
+                    <img src="./images/downloadApp/rightImage.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <footer id="contact">
+            <div class="container">
+                <div class="infoContainer">
+                    <div>
+                        <img src="./images/footer/email.svg" alt="">
+                        <p>info@youremail.com</p>
+                    </div>
+                    <img src="./images/footer/line.svg" alt="">
+                    <div>
+                        <img src="./images/footer/phone.svg" alt="">
+                        <p>+880 321 655 9985</p>
+                    </div>
+                </div>
+                <div class="topPart">
+                    <div class="leftPart">
+                        <h2>Tammy <span>Food</span></h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                        <div class="icons">
+                            <img src="./images/footer/facebook.svg" alt="">
+                            |
+                            <img src="./images/footer/instagram.svg" alt="">
+                            |
+                            <img src="./images/footer/twitter.svg" alt="">
+                            |
+                            <img src="./images/footer/youtube.svg" alt="">
+                        </div>
+                    </div>
+                    <ul>
+                        <li>QUICK LINK</li>
+                        <li>About Us</li>
+                        <li>Menu</li>
+                        <li>Blog</li>
+                        <li>Contact Us</li>
+                    </ul>
+                    <div class="rightPart">
+                        <h2>NEWS LETTER</h2>
+                        <p>Subscribe our newsletter to get our latest update & news</p>
+                        <form class="input" id="footerForm">
+                            <input placeholder="Your email address" type="text" id="emailInput">
+                            <button type="submit"><img src="./images/footer/send.svg" alt=""></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <img src="./images/footer/copyright.svg" alt="">
+                    <p>Copyright 2021 .Tammy Food. All Right Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./script/libs/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+</html>

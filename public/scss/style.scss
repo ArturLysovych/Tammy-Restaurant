@@ -1,0 +1,889 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-VariableFont_slnt\,wght.ttf") format(".ttf");
+}
+@mixin text-style($fZ, $color, $fW){
+    font-size: $fZ;
+    color: $color;
+    font-weight: $fW;
+}
+@mixin flex-style($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: #3c3c3c;
+}
+body{
+    min-width: 320px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #FFC12F;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+.wrapper{
+    width: 100%;
+    flex-direction: column;
+    @include flex-style(center, center);
+    overflow: hidden;
+    position: relative;
+}
+.container{
+    width: 1240px;
+    height: 100%;
+    padding: 0 10px;
+}
+.header{
+    height: 108px;
+    width: 100%;
+    @include flex-style(center, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 251, 243, .8);
+    z-index: 4;
+    .container{
+        @include flex-style(space-between, center);
+    }
+    h2{
+        user-select: none;
+        cursor: pointer;
+        @include text-style(32px,#3C3C3C, 700);
+        transition: .5s;
+        span{
+            color: #FCC647;
+            transition: .5s;
+        }
+        &:hover{
+            color: #FCC647;
+            span{
+                color: #3C3C3C;
+            }
+        }
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        @include text-style(20px,#3C3C3C, 700);
+        li{
+            margin: 0 50px;
+            transition: .2s;
+            cursor: pointer;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: #FCC647;
+                bottom: -4px;
+                transition: .2s;
+                transform-origin: center;
+                transform: scaleX(0);
+            }
+            &:hover::before{
+                width: 100%;
+                z-index: -1;
+                box-shadow: 0 0 5px #FCC647;
+                transform: scaleX(1);
+            }
+            &:hover{
+                color: #FCC647;
+                text-shadow: 0 0 5px #FCC647;
+            }
+        }
+    }
+    .burger{
+        width: 55px !important;
+        height: 30px !important;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        cursor: pointer;
+        .line{
+            width: 40px;
+            height: 5px;
+            background: #FCC647;
+            border-radius: 5px;
+        }
+    }
+    .openCart{
+        background: #FCC647;
+        @include text-style(20px,#fff, 700);
+        width: 60px;
+        height: 30px;
+        border-radius: 8px;
+        @include flex-style(center, center);
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        transition: .2s;
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 5px #FCC647;
+        }
+        .itemCount{
+            position: absolute;
+            width: 25px !important;
+            height: 25px !important;
+            top: -10px;
+            right: -10px;
+            background: tomato;
+            @include flex-style(center, center);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(18px,#fff, 700);
+            border-radius: 50%;
+        }
+    }
+}
+.burgerMenu{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    background: #FFC12F;
+    @include flex-style(center, center);
+    display: none;
+    .container{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        @include flex-style(space-around, center);
+        padding: 0;
+    }
+    .menuHeader{
+        height: 108px;
+        width: 100%;
+        padding: 0 30px;
+        @include flex-style(space-between, center);
+        background: #FFC12F;
+        h2{
+            color: #FFFBF3;
+            span{
+                color: #3C3C3C;
+            }
+        }
+        .burger{
+            .line{
+                background: #3C3C3C;
+            }
+        }
+    }
+    #links{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        @include flex-style(center, center);
+        gap: 20px;
+        a{
+            @include text-style(32px,#3c3c3c, 600);
+            width: 100% !important;
+            transition: .5s;
+            @include flex-style(center, center);
+            text-align: center;
+            &:hover{
+                background: #FFFFFF;
+            }
+        }
+    }
+}
+.homePage{
+    overflow: hidden;
+    height: 100vh;
+    background: #FFFBF3;
+    width: 100%;
+    background-image: url('../images/homePage/background.jpg');
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    @include flex-style(space-between, center);
+    .sections{
+        width: 100%;
+        height: calc(100% - 108px);
+        display: flex;
+        @include flex-style(center, center);
+        padding-top: 108px;
+        .container{
+            width: 1240px;
+            height: 100%;   
+            @include flex-style(space-between, center);
+        }
+        .leftSection{
+            width: 50%;
+            height: 100%;
+            @include flex-style(flex-start, flex-start);
+            flex-direction: column;
+            padding-top: 80px;
+            .fastDelivery{
+                width: 148px;
+                height: 39px;
+                background: #FFF2D4;
+                @include text-style(16px,#F4B41B, 600);
+                border-radius: 7px;
+                @include flex-style(center, center);
+                margin: 17px 0;
+                overflow: hidden;
+                position: relative;
+                &::before{
+                    content: 'Fast Delivery';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    @include flex-style(center, center);
+                    background: #F4B41B;
+                    transition: .2s;
+                    transform: scaleY(0);
+                    transform-origin: bottom;
+                }
+                &:hover::before{
+                    transform: scaleY(1);
+                    color: #FFF2D4;
+                }
+            }
+            p{
+                &:nth-child(2){
+                    margin: 17px 0;
+                    @include text-style(48px,#3C3C3C, 700);
+                    span{
+                        color: #FFC12F;
+                    }
+                }
+                &:nth-child(3){
+                    margin: 0 0 54px 0;
+                    @include text-style(16px,#3C3C3C, 400);
+                    span{
+                        color: #667085;
+                    }
+                }
+            }
+            div{
+                &:nth-child(1){
+                    margin: 54px 0 0 0;
+                }
+                @include flex-style(flex-start, center);
+                button{
+                    width: 146px;
+                    height: 52px;
+                    background: #FFC12F;
+                    @include text-style(19px,#FFFFFF, 500);
+                    border: none;
+                    outline: none;
+                    border-radius: 26px;
+                    cursor: pointer;
+                    transition: .2s;
+                    position: relative;
+                    overflow: hidden;
+                    &::before{
+                        content: 'Get started';
+                        @include flex-style(center, center);
+                        width: 100%;
+                        height: 100%;
+                        background: #FFF2D4;
+                        color: #F4B41B;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        transition: .2s;
+                    }
+                    &:hover::before{
+                        transform: scaleY(1);
+                    }
+                    &:hover{
+                        transform: scale(1.05);
+                        box-shadow: 0 0 15px #F4B41B;
+                    }
+                }
+                div{
+                    background-image: url('../images/homePage/play.svg');
+                    height: 40px;
+                    width: 261px;
+                    background-size: cover;
+                    background-position: center;
+                    @include flex-style(center, center);
+                    @include text-style(17px,#3C3C3C, 500);
+                    transition: .2s;
+                }
+            }
+        }
+        .rightSection{
+            width: 835px;
+            height: 633px;
+            background-image: url('../images/homePage/pizza.svg');
+            background-size: cover;
+            background-position: right;
+            z-index: 3;
+            margin-right: -277px;
+            transform-origin: center;
+        }
+    }
+}
+.howItWorks{
+    min-height: 696px;
+    width: 100%;
+    @include flex-style(center, center);
+    padding-top: 99px;
+    padding-bottom: 44px;
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @include text-style(36px,#3C3C3C, 700);
+    }
+    .lorem{
+        width: 505px;
+        text-align: center;
+        @include text-style(14px,#667085, 400);
+    }
+    .container{
+        flex-direction: column;
+        @include flex-style(space-between, center);
+    }
+    .itemBox{
+        width: 100%;
+        min-height: 356px;
+        @include flex-style(space-between, center);
+        .item{
+            width: 325px;
+            height: 300px;
+            flex-direction: column;
+            @include flex-style(space-around, center);
+            img{
+                transition: .2s;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+                &:hover{
+                    transform: scale(1.1)
+                }
+            }
+            h2{
+                @include text-style(20px,#3C3C3C, 600);
+            }
+            p{
+                @include text-style(14px,#667085, 400);
+                text-align: center;
+                line-height: 27px;
+            }
+        }
+        .centerItem{
+            align-self: flex-end;
+        }
+    }
+}
+.ourDeliciousDish{
+    min-height: 1094px;
+    width: 100%;
+    @include flex-style(center, center);
+    padding-top: 44px;
+    padding-bottom: 100px;
+    .container{
+        flex-direction: column;
+        @include flex-style(space-around, center);
+    }
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @include text-style(36px,#3C3C3C, 700);
+    }
+    .lorem{
+        width: 465px;
+        line-height: 27px;
+        text-align: center;
+        @include text-style(14px,#667085, 400);
+    }
+    .pizzaContainer{
+        min-height: 683px;
+        width: 100%;
+        flex-wrap: wrap;
+        @include flex-style(space-around, center);
+        .card{
+            height: 319px;
+            width: 273px;
+            background: transparent;
+            border: 1px solid rgba(112, 112, 112, .2);
+            border-radius: 10px;
+            padding: 20px;
+            flex-direction: column;
+            @include flex-style(space-between, center);
+            transition: .2s;
+            margin: 45px 0;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(112, 112, 112, .2);
+                border: 1px solid #F9A755;
+            }
+        }
+        .stars{
+            align-self: flex-start;
+        }
+        .cardName{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(18px,#3C3C3C, 700);
+            align-self: flex-start;
+        }
+        p{
+            @include text-style(12px,#667085, 400);
+            line-height: 20px;
+            width: 227px;
+        }
+        .cardBottom{
+            align-self: flex-start;
+            width: 100%;
+            @include flex-style(space-between, center);
+            .price{
+                @include text-style(16px,#3C3C3C, 600);
+            }
+            div{
+                display: flex;
+                gap: 9px;
+                .addToCart{
+                    width: 28px;
+                    height: 28px;
+                    background-image: url('../images/ourDeliciousDish/addToCart.svg');
+                    cursor: pointer;
+                    background-size: cover;
+                    background-position: center;
+                    transition: .2s;
+                    border-radius: 4px;
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0 0 5px red;
+                    }
+                }
+                .share{
+                    width: 28px;
+                    height: 28px;
+                    background-image: url('../images/ourDeliciousDish/share.svg');
+                    cursor: pointer;
+                    background-size: cover;
+                    background-position: center;
+                    transition: .2s;
+                    border-radius: 4px;
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0 0 5px gray;
+                    }
+                }
+            }
+        }
+    }
+    .pagination{
+        width: 400px;
+        height: 40px;
+        @include flex-style(space-between, center);
+        button{
+            height: 39px;
+            width: 39px;
+            border-radius: 50%;
+        }
+        button{
+            background: #FFFFFF;
+            border: 1px solid #EAECED;
+            @include text-style(16px,#667085, 700);
+            &:nth-child(2){
+                background: #FEB918;
+                color: #FFFFFF;
+                border: none;
+            }
+        }
+    }
+}
+.ourTarget{
+    height: 712px;
+    width: 100%;
+    @include flex-style(center, center);
+    background: #FFFBF3;
+    .container{
+        @include flex-style(space-between, center);
+    }
+    .leftPart{
+        width: 48%;
+        height: 100%;
+        @include flex-style(center, center);
+        overflow: hidden;
+        img{
+            object-position: center;
+        }
+    }
+    .rightPart{
+        width: 52%;
+        height: 100%;
+        flex-direction: column;
+        @include flex-style(center, flex-start);
+        gap: 40px;
+        .target{
+            width: 109px;
+            height: 32px;
+            background: #FFEFC8;
+            @include text-style(14px,#EF9737, 600);
+            border-radius: 6px;
+            @include flex-style(center, center);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            &::before{
+                content: 'Our Target';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                @include flex-style(center, center);
+                background: #F4B41B;
+                transition: .2s;
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
+            &:hover::before{
+                transform: scaleY(1);
+                color: #FFF2D4;
+            }
+        }
+        h2{
+            width: 565px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(36px,#535353, 700);
+        }
+        p{
+            width: 537px;
+            @include text-style(16px,#667085, 400);
+            width: 100%;
+        }
+        .orderNow{
+            width: 121px;
+            height: 44px;
+            border-radius: 6px;
+            background: #FCC647;
+            @include text-style(12px,#FFFFFF, 600);
+            border: none;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            &::before{
+                content: 'Order Now';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                @include flex-style(center, center);
+                background: #FFF2D4;
+                transition: .2s;
+                transform: scaleY(0);
+                transform-origin: bottom;
+                top: 0;
+                left: 0;
+            }
+            &:hover::before{
+                transform: scaleY(1);
+                color: #FCC647;
+            }
+        }
+    }
+}
+.downloadApp{
+    min-height: 951px;
+    width: 100%;
+    @include flex-style(center, center);
+    .container{
+        display: flex;
+    }
+    .leftPart{
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        @include flex-style(center, flex-start);
+        gap: 40px;
+        h2{
+            width: 418px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(36px,#3C3C3C, 700);
+        }
+        p{
+            width: 501px;
+            @include text-style(16px,#667085, 400);
+            line-height: 32px;
+        }
+        div{
+            display: flex;
+            gap: 22px;
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+    .rightPart{
+        width: 50%;
+        height: 100%;
+        @include flex-style(center, center);
+    }
+}
+footer{
+    min-height: 542px;
+    width: 100%;
+    background: #232233;
+    @include flex-style(center, center);
+    position: relative;
+    .infoContainer{
+        position: absolute;
+        top: -130px;
+        width: 1170px;
+        height: 230px;
+        left: 50%;
+        margin-left: calc(-1170px/2);
+        border-radius: 30px;
+        background: #FFFFFF;
+        @include flex-style(space-around, center);
+        box-shadow: 0 0 100px rgba(0, 0, 0, .24);
+        div{
+            gap: 18px;
+            @include flex-style(space-between, center);
+            @include text-style(28px,#232233, 600);
+        }
+    }    
+    .topPart{
+        min-height: 482px;
+        width: 100%;
+        @include flex-style(space-between, center);
+        padding-bottom: 52px;
+        flex-wrap: wrap;
+        .leftPart{
+            width: 331px;
+            height: 100%;
+            flex-direction: column;
+            @include flex-style(flex-end, flex-start);
+            gap: 26px;
+            h2{
+                @include text-style(25px,#FFFFFF, 700);
+                span{
+                    color: #FCC647;
+                }
+            }
+            p{
+                line-height: 25px;
+                @include text-style(14px,#FFFFFF, 400);
+            }
+            .icons{
+                @include flex-style(center, center);
+                gap: 36px;
+                @include text-style(20px,#FFFFFF, 200);
+            }
+        }
+        ul{
+            width: 141px;
+            height: 100%;
+            flex-direction: column;
+            @include flex-style(flex-end, flex-start);
+            list-style: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(16px,#FFFFFF, 600);
+            li{
+                line-height: 37.5px;
+            }
+            li:first-child{
+                @include text-style(24px,#FFFFFF, 700);
+            }
+        }
+        .rightPart{
+            width: 369px;
+            height: 100%;
+            flex-direction: column;
+            @include flex-style(flex-end, flex-start);
+            gap: 23px;
+            h2{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                @include text-style(25px,#FFFFFF, 700);
+            }
+            p{
+                line-height: 24px;
+                margin: 0 0 10px 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                @include text-style(16px,#FFFFFF, 400);
+            }
+            .input{
+                width: 369px;
+                height: 50px;
+                border-radius: 4px;
+                overflow: hidden;
+                background: #FFFFFF;
+                @include flex-style(space-around, center);
+                input{
+                    height: 100%;
+                    width: 315px;
+                    border: none;
+                    outline: none;
+                    @include text-style(16px,#6C6C72, 400);
+                    padding: 13px 0 13px 18px;
+                }
+                button{
+                    width: 52px;
+                    height: 46px;
+                    border-radius: 4px;
+                    background: #FEB918;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    @include flex-style(center, center);
+                }
+            }
+        }
+    }
+    .copyright{
+        height: 60px;
+        width: 100%;
+        @include flex-style(center, center);
+        border-top: 2px solid #FFFFFF;
+        @include text-style(16px,#FFFFFF, 400);
+        img{
+            margin: 0 10px;
+        }
+    }
+}
+
+.cart{
+    width: 1000px;
+    height: 700px;
+    background: #303030;
+    box-shadow: 0 0 10px #303030;
+    position: absolute;
+    top: -1020px;
+    z-index: 4;
+    padding: 20px;
+    display: flex;
+    transition: .5s;
+    .leftPart{
+        height: 100%;
+        width: 70%;
+        flex-direction: column;
+        @include flex-style(space-around, flex-start);
+        h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            @include text-style(36px,#fff, 700);
+        }
+        .itemPlace{
+            width: 600px;
+            height: 500px;
+            overflow-y: scroll;
+            border: 10px solid #3c3c3c;
+            flex-direction: column;
+            @include flex-style(space-between, center);
+            transition: .2s;
+            .item{
+                height: 200px !important;
+                width: 95%;
+                margin: 20px 0;
+                background: #FFC12F;
+                @include flex-style(space-between, center);
+                cursor: pointer;
+                transition: .2s;
+                &:hover{
+                    transform: scale(1.02);
+                    box-shadow: 0 0 10px #FFC12F;
+                }
+                .leftPart{
+                    @include flex-style(center, center);
+                    width: 200px;
+                    height: 200px;
+                    background: #FFC12F;
+                    img{
+                        width: 180px;
+                        height: 180px;
+                        background: #FFFFFF;
+                    }
+                }
+                .rightPart{
+                    flex-direction: column;
+                    @include flex-style(center, center);
+                    gap: 10px;
+                    width: calc(100% - 200px);
+                    height: 200px;
+                    background: #FFFFFF;
+                    .itemName{
+                        @include text-style(24px,#3c3c3c, 700);
+                        text-align: center;
+                    }
+                    p{
+                        @include text-style(16px,#3c3c3c, 700);
+                        text-align: center;
+                    }
+                    .itemPrice{
+                        @include text-style(24px, green, 900);
+                        text-align: center;
+                    }
+                    img{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .rightPart{
+        height: 100%;
+        width: 30%;
+        background: #FFFFFF;
+        flex-direction: column;
+        z-index: 10;
+        @include flex-style(center, center);
+        gap: 50px;
+        h2{
+            @include text-style(22px,#3c3c3c, 700);
+            span{
+                color: tomato;
+            }
+        }
+        input{
+            width: 200px;
+            height: 35px;
+            background: #3c3c3c;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            @include text-style(auto,#fff, 700);
+            transition: .2s;
+        }
+        button{
+            width: 70px;
+            height: 35px;
+            border: none;
+            outline: none;
+            background: #3c3c3c;
+            @include text-style(auto,#fff, 700);
+            cursor: pointer;
+        }
+        .back{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: #3C3C3C;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            @include flex-style(center, center);
+            @include text-style(36px,#fff, 900);
+            cursor: pointer;
+        }
+    }
+}
+
+@import '../scss/mediaQueries.scss';

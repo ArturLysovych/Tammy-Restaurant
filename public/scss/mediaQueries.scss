@@ -1,0 +1,613 @@
+@media screen and (max-width:1280px){
+    .container{
+        width: 960px;
+    }
+    footer{
+        .infoContainer{
+            top: -100px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+        }
+    }
+    .header{
+        h2{
+            font-size: 23px !important;
+        }
+        ul{
+            li{
+                font-size: 14px;
+            }
+        }
+    }
+    .homePage{
+        .sections{
+            .container{
+                .leftSection{
+                    p{
+                        &:nth-child(2){
+                            font-size: 39px;
+                            width: 90%;
+                        }
+                        &:nth-child(3){
+                            font-size: 13px;
+                            width: 90%;
+                        }
+                    }
+                }
+                .rightSection{
+                    background-position: left;
+                }
+            }
+        }
+    }
+    .downloadApp{
+        .leftPart{
+            p{
+                width: 90%;
+                @include text-style(16px,#667085, 400);
+            }
+        }
+        .rightPart{
+            img{
+                width: 500px;
+                height: 500px;
+            }
+        }
+    }
+    .ourTarget{
+        .leftPart{
+            img{
+                margin-right: 100px;
+            }
+        }
+    }
+}
+@media screen and (max-width:960px){
+    .wrapper{
+        .cart{
+            width: 768px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .leftPart{
+                width: 100%;
+                height: 70%;
+                .itemPlace{
+                    width: 100%;
+                    height: 90%;
+                }
+            }
+            .rightPart{
+                width: 100%;
+                height: 30%;
+            }
+        }
+    }
+    .container{
+        width: 768px;
+    }
+    .header{
+        ul{
+            li{
+                margin: 0 20px !important;
+            }
+        }
+    }
+    .homePage{
+        .sections{
+            .container{
+                .rightSection{
+                    background-position: left;
+                    height: 440px;
+                    width: 506px;
+                    margin-right: -200px;
+                }
+            }
+        }
+    }
+    .howItWorks{
+        .itemBox{
+            .item{
+                h2{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 10px;
+                }
+                img{
+                    height: 90px;
+                    width: 90px;
+                }
+            }
+        }
+    }
+    .ourTarget{
+        .leftPart{
+            img{
+                width: 336px;
+                height: 593px;
+            }
+        }
+        .rightPart{
+            h2{
+                width: 100%;
+                font-size: 30px;
+            }
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+    .downloadApp{
+        .rightPart{
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+    footer{
+        .infoContainer{
+            top: -70px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+            transform: scale(.8);
+        }
+        .topPart{
+            padding-top: 120px;
+            gap: 50px;
+            .leftPart{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                p{
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+            ul{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .rightPart{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .wrapper{
+        .cart{
+            width: 540px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .leftPart{
+                width: 100%;
+                height: 80%;
+                .itemPlace{
+                    width: 100%;
+                    height: 80%;
+                }
+            }
+            .rightPart{
+                width: 100%;
+                height: 20%;
+            }
+        }
+    }
+    .container{
+        width: 540px;
+    }
+    .header{
+        ul{
+            li{
+                display: none;
+            }
+        }
+        .burger{
+            display: flex !important;
+        }
+    }
+    .homePage{
+        background-position: center;
+        .burgerMenu{
+            .container{
+                width: 100%;
+            }
+        }
+        .sections{
+            position: relative;
+            .leftSection{
+                width: 100%;
+                align-items: center;
+                gap: 15px;
+                p{
+                    text-align: center;
+                }
+            }
+            .container{
+                .rightSection{
+                    position: absolute;
+                    bottom: -300px;
+                    transform: rotate(90deg);
+                    transform: scale(1.2) rotate(90deg);
+                    display: none;
+                }
+            }
+        }
+    }
+    .howItWorks{
+        p{
+            margin: 20px 0;
+        }
+        .lorem{
+            font-size: 16px;
+        }
+        .itemBox{
+            flex-wrap: wrap;
+            justify-content: center;
+            .line{
+                display: none !important;
+            }
+            .item{
+                h2{
+                    font-size: 32px;
+                }
+                p{
+                    font-size: 16px;
+                }
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        }
+    }
+    .ourTarget{
+        overflow: hidden;
+        position: relative;
+        .leftPart{  
+            position: absolute;
+            left: 0px;
+            bottom: -220px;
+            opacity: .3;
+            img{
+                width: 336px;
+                height: 593px;
+            }
+        }
+        .rightPart{
+            width: 100%;
+            align-items: center !important;
+            h2{
+                width: 100%;
+                font-size: 30px;
+                text-align: center;
+            }
+            p{
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+    }
+    .ourDeliciousDish{
+        .pizzaContainer{
+            .card{
+                width: 300px;
+                height: 350px;
+                p{
+                    align-self: flex-start;
+                }
+            }
+        }
+    }
+    .downloadApp{
+        min-height: 1031px;
+        padding-bottom: 80px;
+        .container{
+            flex-direction: column;
+            gap: 50px;
+        }
+        .leftPart{
+            width: 100%;
+            align-items: center;
+            p, h2{
+                text-align: center;
+            }
+        }
+        .rightPart{
+            width: 100%;
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        }
+    }
+    footer{
+        .infoContainer{
+            top: -70px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+            transform: scale(.8);
+        }
+        .topPart{
+            padding-top: 120px;
+            gap: 50px;
+            .leftPart{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                p{
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+            ul{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .rightPart{
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+@media screen and (max-width:720px){
+    footer{
+        .infoContainer{
+            top: -70px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+            transform: scale(.6);
+        }
+    }
+}
+@media screen and (max-width:540px){
+    .wrapper{
+        .cart{
+            width: 455px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            .leftPart{
+                width: 100%;
+                height: 80%;
+                .itemPlace{
+                    width: 100%;
+                    height: 80%;
+                    .item{
+                        height: 150px !important;
+                        .leftPart{
+                            height: 100%;           
+                            img{
+                                height: 150px;
+                                width: 150px;
+                                border-radius: 50%;
+                            }                 
+                        }
+                        .rightPart{
+                            height: 100%;
+                            .itemName{
+                                font-size: 18px;
+                            }
+                            p{
+                                font-size: 12px;
+                            }   
+                            img{
+                                height: 20px;
+                                width: 20px;
+                            }
+                            .itemPrice{
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+            .rightPart{
+                width: 100%;
+                height: 20%;
+            }
+        }
+    }
+    footer{
+        .infoContainer{
+            top: -70px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+            transform: scale(.5);
+        }
+    }
+}
+@media screen and (max-width:455px){
+    .wrapper{
+        .cart{
+            width: 410px;
+            .leftPart{
+                .itemPlace{
+                    .item{
+                        height: 150px !important;
+                        .leftPart{
+                            height: 100%;  
+                            width: 40%;         
+                            img{
+                                height: 120px;
+                                width: 120px;
+                                border-radius: 50%;
+                            }                 
+                        }
+                        .rightPart{
+                            width: 60%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .rightPart{
+                width: 100%;
+                height: 20%;
+            }
+        }
+    }
+    footer{
+        .infoContainer{
+            top: -70px;
+            width: 870px;
+            height: 180px;
+            left: 50%;
+            margin-left: calc(-870px/2);
+            transform: scale(.4);
+        }
+    }
+}
+@media screen and (max-width:410px){
+    .wrapper{
+        .cart{
+            width: 100%;
+            .leftPart{
+                .itemPlace{
+                    .item{
+                        height: 150px !important;
+                        .leftPart{
+                            height: 100%;  
+                            width: 40%;         
+                            img{
+                                height: 120px;
+                                width: 120px;
+                                border-radius: 50%;
+                            }                 
+                        }
+                        .rightPart{
+                            width: 60%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .rightPart{
+                width: 100%;
+                height: 20%;
+            }
+        }
+    }
+    
+    h2, p{
+        width: 100% !important;
+    }
+    .howItWorks{
+        h2{
+            text-align: center !important;
+        }
+    }
+    .homePage{
+        .sections{
+            .leftSection{
+                div{
+                    flex-direction: column-reverse;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .downloadApp{
+        min-height: 851px;
+        padding: 0;
+        .leftPart{
+            h2{
+                font-size: 24px;
+            }
+        }
+        .rightPart{
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+    .ourDeliciousDish{
+        .pagination{
+            width: 300px;
+            button{
+                &:nth-child(5), &:nth-child(6){
+                    display: none;
+                }
+            }
+        }
+        h2{
+            &:first-child{
+                text-align: center;
+            }
+        }
+    }
+    footer{
+        h2{
+            &:first-child{
+                font-size: 36px !important;
+                text-align: center;
+            }
+        }
+        .infoContainer{
+            display: none;
+        }
+        .icons{
+            gap: 25px !important;
+        }
+        .input{
+            width: 100% !important;
+            input{
+                width: 85% !important;
+            }
+            button{
+                width: 15% !important;
+            }
+        }
+    }
+}
+@media screen and (max-width:380px){
+    .wrapper{
+        .cart{
+            width: 100%;
+            .leftPart{
+                .itemPlace{
+                    .item{
+                        height: 150px !important;
+                        .leftPart{
+                            height: 100%;  
+                            width: 40%;         
+                            img{
+                                height: 90px;
+                                width: 90px;
+                                border-radius: 50%;
+                            }                 
+                        }
+                        .rightPart{
+                            p{
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

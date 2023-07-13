@@ -1,0 +1,36 @@
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 960px !important;
+  }
+  footer .infoContainer {
+    top: -100px;
+    width: 970px;
+    height: 200px;
+    left: 50%;
+    margin-left: -485px;
+  }
+  .header h2 {
+    font-size: 23px !important;
+  }
+  .header ul li {
+    font-size: 14px;
+  }
+  .homePage .sections .container .leftSection p:nth-child(2) {
+    font-size: 39px;
+    width: 90%;
+  }
+  .homePage .sections .container .leftSection p:nth-child(3) {
+    font-size: 13px;
+    width: 90%;
+  }
+  .homePage .sections .container .rightSection {
+    background-position: left;
+  }
+  .downloadApp .rightPart img {
+    width: 500px;
+    height: 500px;
+  }
+  .ourTarget .leftPart img {
+    margin-right: 100px;
+  }
+}/*# sourceMappingURL=mediaQueries.css.map */
